@@ -22,8 +22,8 @@ package soot.jimple;
  * #L%
  */
 
-public abstract class AbstractConstantSwitch implements ConstantSwitch {
-  Object result;
+public abstract class AbstractConstantSwitch<Result> implements ConstantSwitch {
+  Result result;
 
   public void caseDoubleConstant(DoubleConstant v) {
     defaultCase(v);
@@ -60,11 +60,11 @@ public abstract class AbstractConstantSwitch implements ConstantSwitch {
   public void defaultCase(Object v) {
   }
 
-  public Object getResult() {
+  public Result getResult() {
     return result;
   }
 
-  public void setResult(Object result) {
+  public void setResult(Result result) {
     this.result = result;
   }
 }

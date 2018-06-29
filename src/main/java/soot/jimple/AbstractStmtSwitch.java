@@ -22,8 +22,8 @@ package soot.jimple;
  * #L%
  */
 
-public abstract class AbstractStmtSwitch implements StmtSwitch {
-  Object result;
+public abstract class AbstractStmtSwitch<Result> implements StmtSwitch {
+  Result result;
 
   public void caseBreakpointStmt(BreakpointStmt stmt) {
     defaultCase(stmt);
@@ -88,11 +88,11 @@ public abstract class AbstractStmtSwitch implements StmtSwitch {
   public void defaultCase(Object obj) {
   }
 
-  public void setResult(Object result) {
+  public void setResult(Result result) {
     this.result = result;
   }
 
-  public Object getResult() {
+  public Result getResult() {
     return result;
   }
 }

@@ -24,7 +24,7 @@ package soot.jimple;
 
 import soot.Local;
 
-public abstract class AbstractJimpleValueSwitch extends AbstractConstantSwitch implements JimpleValueSwitch {
+public abstract class AbstractJimpleValueSwitch<Result> extends AbstractConstantSwitch<Result> implements JimpleValueSwitch {
   public void caseArrayRef(ArrayRef v) {
     defaultCase(v);
   }

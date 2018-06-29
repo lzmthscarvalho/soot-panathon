@@ -22,8 +22,8 @@ package soot.jimple;
  * #L%
  */
 
-public abstract class AbstractExprSwitch implements ExprSwitch {
-  Object result;
+public abstract class AbstractExprSwitch<Result> implements ExprSwitch {
+  Result result;
 
   public void caseAddExpr(AddExpr v) {
     defaultCase(v);
@@ -156,11 +156,11 @@ public abstract class AbstractExprSwitch implements ExprSwitch {
   public void defaultCase(Object obj) {
   }
 
-  public void setResult(Object result) {
+  public void setResult(Result result) {
     this.result = result;
   }
 
-  public Object getResult() {
+  public Result getResult() {
     return result;
   }
 }
