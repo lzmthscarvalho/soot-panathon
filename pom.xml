@@ -239,6 +239,8 @@
                 <configuration>
                     <reuseForks>false</reuseForks>
                     <forkCount>1</forkCount>
+                    <!-- introduced for panathon compile speed -->
+                    <skip>true</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -292,6 +294,8 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <!-- introduced for panathon compile speed -->
+                    <skip>true</skip>
                     <propertyExpansion>config_loc=${checkstyle.dir.path}</propertyExpansion>
                     <configLocation>${checkstyle.file.path}</configLocation>
                     <encoding>UTF-8</encoding>
@@ -305,6 +309,8 @@
                 <artifactId>license-maven-plugin</artifactId>
                 <version>1.16</version>
                 <configuration>
+                    <!-- introduced for panathon compile speed -->
+                    <skipCheckLicense>true</skipCheckLicense>
                     <failOnMissingHeader>${licence-check.failOnMissingHeader}</failOnMissingHeader>
                     <failOnNotUptodateHeader>${licence-check.failOnMissingHeader}</failOnNotUptodateHeader>
                     <inceptionYear>1997</inceptionYear>
